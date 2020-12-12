@@ -11,7 +11,9 @@ server.use(actionsRouter)
 
 // Complete your server here!
 server.get('/', (req, res) => {
-    res.send("Welcome to adela's first api sprint challenge DEC 2020")
+    res.json({
+		message:`Welcome to ${process.env.NAME} 's first api sprint challenge DEC 2020 ${process.env.SPRINT_CHALLENGE}`
+	})
 })
 
 server.use((err, req, res, next) => {
