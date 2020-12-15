@@ -12,8 +12,8 @@ try{
 });
 router.get("/actions/:id", validateID(), async (req, res) => {
     try{
-const getActionById = await actions.get(req.params.id);
-res.status(200).json(getActionById)
+
+res.status(200).json(req.action)
     }catch(err){
         next(err)
     }
